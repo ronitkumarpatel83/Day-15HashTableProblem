@@ -27,6 +27,10 @@ namespace Day_15HashTableProblem
             Console.WriteLine($"Words Frequency in below string : ");
             Console.WriteLine($"\" {s} \"\n");
             hashTable.Display(); //Calling a display method
+            //Removing "avoidable" word in paragraph and hashtable
+            hashTable.Remove(paragraphWords[Array.IndexOf(paragraphWords, "avoidable")]);
+            Console.WriteLine($"\navoidable word is removed from hashtable\n");
+            hashTable.Display();
         }
         static void Main(string[] args)
         {
